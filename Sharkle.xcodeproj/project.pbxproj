@@ -30,8 +30,8 @@
 		568755551EA82781004C351F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5687555A1EA82782004C351F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5687555C1EA82782004C351F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		568C73821EA9D79600CBA2D3 /* Sharkle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sharkle.entitlements; sourceTree = "<group>"; };
 		568C73831EA9E12300CBA2D3 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		568C73871EA9F27600CBA2D3 /* Sharkle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sharkle.entitlements; sourceTree = "<group>"; };
 		56BF4A721EA99EA300021BC2 /* hey_0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_0.m4a; sourceTree = "<group>"; };
 		56BF4A731EA99EA300021BC2 /* hey_1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_1.m4a; sourceTree = "<group>"; };
 		56BF4A741EA99EA300021BC2 /* hey_2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_2.m4a; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 		568755521EA82781004C351F /* Sharkle */ = {
 			isa = PBXGroup;
 			children = (
-				568C73821EA9D79600CBA2D3 /* Sharkle.entitlements */,
+				568C73871EA9F27600CBA2D3 /* Sharkle.entitlements */,
 				568755531EA82781004C351F /* AppDelegate.swift */,
 				568755551EA82781004C351F /* ViewController.swift */,
 				56CD70991EA98A12004AFA12 /* SharkleWindowController.swift */,
@@ -140,7 +140,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
