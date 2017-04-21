@@ -10,6 +10,7 @@
 		568755541EA82781004C351F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755531EA82781004C351F /* AppDelegate.swift */; };
 		568755561EA82781004C351F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755551EA82781004C351F /* ViewController.swift */; };
 		5687555B1EA82782004C351F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568755591EA82782004C351F /* Main.storyboard */; };
+		568C73841EA9E12300CBA2D3 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568C73831EA9E12300CBA2D3 /* AboutViewController.swift */; };
 		56BF4A7A1EA99EA300021BC2 /* hey_0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A721EA99EA300021BC2 /* hey_0.m4a */; };
 		56BF4A7B1EA99EA300021BC2 /* hey_1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A731EA99EA300021BC2 /* hey_1.m4a */; };
 		56BF4A7C1EA99EA300021BC2 /* hey_2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A741EA99EA300021BC2 /* hey_2.m4a */; };
@@ -29,6 +30,8 @@
 		568755551EA82781004C351F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5687555A1EA82782004C351F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5687555C1EA82782004C351F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568C73821EA9D79600CBA2D3 /* Sharkle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sharkle.entitlements; sourceTree = "<group>"; };
+		568C73831EA9E12300CBA2D3 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		56BF4A721EA99EA300021BC2 /* hey_0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_0.m4a; sourceTree = "<group>"; };
 		56BF4A731EA99EA300021BC2 /* hey_1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_1.m4a; sourceTree = "<group>"; };
 		56BF4A741EA99EA300021BC2 /* hey_2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_2.m4a; sourceTree = "<group>"; };
@@ -72,9 +75,11 @@
 		568755521EA82781004C351F /* Sharkle */ = {
 			isa = PBXGroup;
 			children = (
+				568C73821EA9D79600CBA2D3 /* Sharkle.entitlements */,
 				568755531EA82781004C351F /* AppDelegate.swift */,
 				568755551EA82781004C351F /* ViewController.swift */,
 				56CD70991EA98A12004AFA12 /* SharkleWindowController.swift */,
+				568C73831EA9E12300CBA2D3 /* AboutViewController.swift */,
 				56BF4A821EA9B4D100021BC2 /* Assets.xcassets */,
 				56CD70AD1EA99D9B004AFA12 /* Sounds */,
 				568755591EA82782004C351F /* Main.storyboard */,
@@ -133,6 +138,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4YJ6956B5Q;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -182,6 +192,7 @@
 				56CD709A1EA98A12004AFA12 /* SharkleWindowController.swift in Sources */,
 				568755561EA82781004C351F /* ViewController.swift in Sources */,
 				568755541EA82781004C351F /* AppDelegate.swift in Sources */,
+				568C73841EA9E12300CBA2D3 /* AboutViewController.swift in Sources */,
 				56CD709C1EA9965E004AFA12 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sharkle/Sharkle.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4YJ6956B5Q;
 				INFOPLIST_FILE = Sharkle/Info.plist;
@@ -310,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sharkle/Sharkle.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4YJ6956B5Q;
 				INFOPLIST_FILE = Sharkle/Info.plist;

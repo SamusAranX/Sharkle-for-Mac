@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -20,6 +22,7 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <segue destination="71C-e3-hS3" kind="show" id="3ct-02-Jeg"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -51,6 +54,18 @@
                                         <menuItem title="Quit Sharkle" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="File" id="sMI-sn-ism">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="File" id="AGK-qB-lA1">
+                                    <items>
+                                        <menuItem title="Close" keyEquivalent="w" id="57A-6N-xpX">
+                                            <connections>
+                                                <action selector="performClose:" target="Ady-hI-5gd" id="Ktg-9n-gkl"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -102,14 +117,14 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sharkle" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="27"/>
+            <point key="canvasLocation" x="-190" y="163"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" customClass="SharkleWindowController" customModule="Sharkle" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="SharkleWindowController" customModule="Sharkle" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Sharkle" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowCollectionBehavior key="collectionBehavior" stationary="YES" ignoresCycle="YES" fullScreenNone="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" ignoresCycle="YES" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="240" height="246"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -122,7 +137,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="242"/>
+            <point key="canvasLocation" x="85" y="242"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -173,5 +188,220 @@
             </objects>
             <point key="canvasLocation" x="409" y="242"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="DKm-b0-18F">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="71C-e3-hS3" sceneMemberID="viewController">
+                    <window key="window" title="About Sharkle" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="GiL-Z3-jjO">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="425" y="461" width="320" height="246"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+                    </window>
+                    <connections>
+                        <segue destination="07T-8k-iQn" kind="relationship" relationship="window.shadowedContentViewController" id="j8v-jx-79Y"/>
+                    </connections>
+                </windowController>
+                <customObject id="hbH-mH-I9h" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="684"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="CCN-1D-17n">
+            <objects>
+                <viewController id="07T-8k-iQn" customClass="AboutViewController" customModule="Sharkle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="K5Y-68-kxm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="234"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="TTG-89-vnz">
+                                <rect key="frame" x="0.0" y="154" width="320" height="80"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-2M-lYU">
+                                        <rect key="frame" x="232" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gB5-2M-lYU" secondAttribute="height" multiplier="1:1" id="O6P-hW-wFd"/>
+                                        </constraints>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SmolIcon" id="2MC-jK-Q8H"/>
+                                    </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-Ge-yZy">
+                                        <rect key="frame" x="18" y="24" width="133" height="48"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sharkle" id="Agd-Z6-16r">
+                                            <font key="font" metaFont="systemLight" size="40"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuZ-j5-zuH">
+                                        <rect key="frame" x="149" y="30" width="24" height="19"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="vX" id="q3l-m9-WTY">
+                                            <font key="font" metaFont="systemSemibold" size="16"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-Tb-MeQ">
+                                        <rect key="frame" x="18" y="12" width="200" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="A project by Peter Wunder, 2017" id="q1H-rd-AgY">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="4p2-vT-JgE">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="yVX-Fl-etg"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4p2-vT-JgE" secondAttribute="bottom" id="38k-9H-V2K"/>
+                                    <constraint firstAttribute="trailing" secondItem="4p2-vT-JgE" secondAttribute="trailing" id="GuS-pl-Xdy"/>
+                                    <constraint firstItem="gB5-2M-lYU" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="top" id="Pk3-Kb-KL2"/>
+                                    <constraint firstAttribute="trailing" secondItem="gB5-2M-lYU" secondAttribute="trailing" constant="8" id="Qic-V9-TSX"/>
+                                    <constraint firstItem="j8H-Tb-MeQ" firstAttribute="leading" secondItem="TTG-89-vnz" secondAttribute="leading" constant="20" id="RH3-p2-zgI"/>
+                                    <constraint firstItem="rpz-Ge-yZy" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="top" constant="8" id="SIF-g5-0ux"/>
+                                    <constraint firstItem="rpz-Ge-yZy" firstAttribute="leading" secondItem="TTG-89-vnz" secondAttribute="leading" constant="20" id="Ssc-wU-dvR"/>
+                                    <constraint firstItem="j8H-Tb-MeQ" firstAttribute="top" secondItem="rpz-Ge-yZy" secondAttribute="bottom" constant="-5" id="Tpk-BF-6rJ"/>
+                                    <constraint firstItem="4p2-vT-JgE" firstAttribute="leading" secondItem="TTG-89-vnz" secondAttribute="leading" id="aaR-h1-tVI"/>
+                                    <constraint firstItem="cuZ-j5-zuH" firstAttribute="leading" secondItem="rpz-Ge-yZy" secondAttribute="trailing" constant="2" id="dKY-Wo-C8C"/>
+                                    <constraint firstItem="cuZ-j5-zuH" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="top" constant="31" id="fqM-UJ-i6J"/>
+                                    <constraint firstAttribute="height" constant="80" id="gJe-tR-wPi"/>
+                                    <constraint firstAttribute="bottom" secondItem="gB5-2M-lYU" secondAttribute="bottom" id="zT2-Nm-Mxu"/>
+                                </constraints>
+                            </customView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jn-2v-FD2">
+                                <rect key="frame" x="18" y="112" width="284" height="34"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Inspired by Night in the Woods's Sharkle and Jesse Cox's playthrough of the game." allowsEditingTextAttributes="YES" id="YTh-fe-VNc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="h1L-a8-7nr">
+                                <rect key="frame" x="20" y="6" width="280" height="71"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Wg-Q8-trS">
+                                        <rect key="frame" x="136" y="43" width="150" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="It's on GitHub! 🛠" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4ll-5m-JuN">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="sourceButton:" target="07T-8k-iQn" id="TOp-83-x5q"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSz-Xg-tMy">
+                                        <rect key="frame" x="-2" y="53" width="110" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Want the source?" id="t3s-2F-K1D">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caH-dl-b1g">
+                                        <rect key="frame" x="-2" y="28" width="83" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Found bugs?" id="TFv-9S-M7W">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL4-r3-mde">
+                                        <rect key="frame" x="-2" y="3" width="74" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Got praise?" id="PUL-rr-vbf">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVT-aD-Daj">
+                                        <rect key="frame" x="136" y="18" width="110" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Tell me! 🐛" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xUJ-LM-5cs">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="bugsButton:" target="07T-8k-iQn" id="eYu-Sl-OzF"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Pt-jp-RHM">
+                                        <rect key="frame" x="136" y="-7" width="149" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="I'm on Twitter! ❤️" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cmb-Zq-XkK">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="praiseButton:" target="07T-8k-iQn" id="8IU-ja-HyS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="LYB-aT-awp"/>
+                                </constraints>
+                            </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yKT-gM-7X0">
+                                <rect key="frame" x="151" y="78" width="155" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="oaE-P6-2zO"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="To the Playthrough" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xTi-71-Ddx">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="playthroughButton:" target="07T-8k-iQn" id="Iky-OT-2zX"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="V7X-sM-H1w">
+                                <rect key="frame" x="14" y="78" width="139" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="AIF-gF-jhF"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="About the Game" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DtJ-bN-rzo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="aboutButton:" target="07T-8k-iQn" id="3V8-G6-cdP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6jn-2v-FD2" firstAttribute="leading" secondItem="K5Y-68-kxm" secondAttribute="leading" constant="20" id="0UH-ry-nga"/>
+                            <constraint firstAttribute="trailing" secondItem="h1L-a8-7nr" secondAttribute="trailing" constant="20" id="0ri-wh-2MC"/>
+                            <constraint firstAttribute="trailing" secondItem="yKT-gM-7X0" secondAttribute="trailing" constant="20" id="EZ9-3R-AFv"/>
+                            <constraint firstAttribute="trailing" secondItem="TTG-89-vnz" secondAttribute="trailing" id="Xog-gz-wbX"/>
+                            <constraint firstItem="TTG-89-vnz" firstAttribute="top" secondItem="K5Y-68-kxm" secondAttribute="top" id="ZFo-WG-275"/>
+                            <constraint firstItem="yKT-gM-7X0" firstAttribute="top" secondItem="6jn-2v-FD2" secondAttribute="bottom" constant="6" id="a2H-WK-pAK"/>
+                            <constraint firstItem="V7X-sM-H1w" firstAttribute="top" secondItem="6jn-2v-FD2" secondAttribute="bottom" constant="6" id="eHo-mw-bxa"/>
+                            <constraint firstAttribute="trailing" secondItem="6jn-2v-FD2" secondAttribute="trailing" constant="20" id="izs-OF-Q0A"/>
+                            <constraint firstItem="TTG-89-vnz" firstAttribute="leading" secondItem="K5Y-68-kxm" secondAttribute="leading" id="mNY-Ez-jjE"/>
+                            <constraint firstItem="6jn-2v-FD2" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="bottom" constant="8" id="oXv-Ki-fUy"/>
+                            <constraint firstAttribute="bottom" secondItem="h1L-a8-7nr" secondAttribute="bottom" constant="6" id="rWG-iW-cek"/>
+                            <constraint firstItem="V7X-sM-H1w" firstAttribute="leading" secondItem="K5Y-68-kxm" secondAttribute="leading" constant="20" id="wnH-dK-2MO"/>
+                            <constraint firstItem="h1L-a8-7nr" firstAttribute="leading" secondItem="K5Y-68-kxm" secondAttribute="leading" constant="20" id="xZf-Yg-FIg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="TTG-89-vnz" id="ui1-qz-KDj"/>
+                        <outlet property="horizontalLine" destination="4p2-vT-JgE" id="9lx-fh-3tu"/>
+                        <outlet property="versionLabel" destination="cuZ-j5-zuH" id="pJU-Ol-5PH"/>
+                    </connections>
+                </viewController>
+                <customObject id="VfE-9C-yxT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="693"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="SmolIcon" width="80" height="80"/>
+    </resources>
 </document>

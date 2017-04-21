@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var sharkleWaveView: NSView!
     @IBOutlet weak var sharkleBubbleView: NSView!
     
+    // Global AVAudioPlayer variable, gets set in mouseDown event
     var player: AVAudioPlayer!
     
     let idleImages: [NSImage] = (0..<8).map({ NSImage(named: "sharkle_idle\($0)")! })
@@ -37,7 +38,7 @@ class ViewController: NSViewController {
     var animationIsPlaying = false
     override func mouseDown(with event: NSEvent) {
         if animationIsPlaying {
-            // 
+            // Sharkle is currently waving, don't interrupt him
             return
         }
         
@@ -48,10 +49,14 @@ class ViewController: NSViewController {
             player.volume = 2.0 // The sounds are really quiet, so I'm compensating for that here
             player.play()
             
+            // Stop regular idle animation
             sharkleIdleView.stopAnimating()
             
+            // Start waving animation
             sharkleWaveView.animate(withImages: waveImages, andDuration: waveAnimDuration)
-            sharkleBubbleView.animate(withImages: bubbleImages, andDuration: bubbleAnimDuration, repeatTimes: 3, afterWhich: {
+            
+            // Start bubble animation, after which all animations get reset
+            sharkleBubbleView.animate(withImages: bubbleImages, andDuration: bubbleAnimDuration, repeatTimes: 2.5, afterWhich: {
                 self.sharkleWaveView.stopAnimating()
                 self.sharkleIdleView.animate(withImages: self.idleImages, andDuration: self.idleAnimDuration)
                 self.animationIsPlaying = false

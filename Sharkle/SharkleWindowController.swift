@@ -17,9 +17,11 @@ class SharkleWindowController: NSWindowController {
         // This is the only way to make Sharkle able to intercept clicks.
         self.window?.level = Int(CGWindowLevelForKey(CGWindowLevelKey.desktopIconWindow)) + 1
         
+        // Make window movable by its background, durr
         self.window?.isMovableByWindowBackground = true
+        
+        // Make window background transparent
         self.window?.backgroundColor = NSColor(white: 0.5, alpha: 0)
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
 
 }
