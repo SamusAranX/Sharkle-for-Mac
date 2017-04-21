@@ -3,23 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		568755541EA82781004C351F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755531EA82781004C351F /* AppDelegate.swift */; };
 		568755561EA82781004C351F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755551EA82781004C351F /* ViewController.swift */; };
-		568755581EA82781004C351F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 568755571EA82781004C351F /* Assets.xcassets */; };
 		5687555B1EA82782004C351F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568755591EA82782004C351F /* Main.storyboard */; };
+		56BF4A7A1EA99EA300021BC2 /* hey_0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A721EA99EA300021BC2 /* hey_0.m4a */; };
+		56BF4A7B1EA99EA300021BC2 /* hey_1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A731EA99EA300021BC2 /* hey_1.m4a */; };
+		56BF4A7C1EA99EA300021BC2 /* hey_2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A741EA99EA300021BC2 /* hey_2.m4a */; };
+		56BF4A7D1EA99EA300021BC2 /* hey_3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A751EA99EA300021BC2 /* hey_3.m4a */; };
+		56BF4A7E1EA99EA300021BC2 /* hey_4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A761EA99EA300021BC2 /* hey_4.m4a */; };
+		56BF4A7F1EA99EA300021BC2 /* hey_5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A771EA99EA300021BC2 /* hey_5.m4a */; };
+		56BF4A801EA99EA300021BC2 /* hey_6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A781EA99EA300021BC2 /* hey_6.m4a */; };
+		56BF4A811EA99EA300021BC2 /* hey_7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A791EA99EA300021BC2 /* hey_7.m4a */; };
+		56BF4A831EA9B4D100021BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BF4A821EA9B4D100021BC2 /* Assets.xcassets */; };
+		56CD709A1EA98A12004AFA12 /* SharkleWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD70991EA98A12004AFA12 /* SharkleWindowController.swift */; };
+		56CD709C1EA9965E004AFA12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD709B1EA9965E004AFA12 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		568755501EA82781004C351F /* Sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568755531EA82781004C351F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568755551EA82781004C351F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		568755571EA82781004C351F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5687555A1EA82782004C351F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5687555C1EA82782004C351F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56BF4A721EA99EA300021BC2 /* hey_0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_0.m4a; sourceTree = "<group>"; };
+		56BF4A731EA99EA300021BC2 /* hey_1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_1.m4a; sourceTree = "<group>"; };
+		56BF4A741EA99EA300021BC2 /* hey_2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_2.m4a; sourceTree = "<group>"; };
+		56BF4A751EA99EA300021BC2 /* hey_3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_3.m4a; sourceTree = "<group>"; };
+		56BF4A761EA99EA300021BC2 /* hey_4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_4.m4a; sourceTree = "<group>"; };
+		56BF4A771EA99EA300021BC2 /* hey_5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_5.m4a; sourceTree = "<group>"; };
+		56BF4A781EA99EA300021BC2 /* hey_6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_6.m4a; sourceTree = "<group>"; };
+		56BF4A791EA99EA300021BC2 /* hey_7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hey_7.m4a; sourceTree = "<group>"; };
+		56BF4A821EA9B4D100021BC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56CD70991EA98A12004AFA12 /* SharkleWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharkleWindowController.swift; sourceTree = "<group>"; };
+		56CD709B1EA9965E004AFA12 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +74,29 @@
 			children = (
 				568755531EA82781004C351F /* AppDelegate.swift */,
 				568755551EA82781004C351F /* ViewController.swift */,
-				568755571EA82781004C351F /* Assets.xcassets */,
+				56CD70991EA98A12004AFA12 /* SharkleWindowController.swift */,
+				56BF4A821EA9B4D100021BC2 /* Assets.xcassets */,
+				56CD70AD1EA99D9B004AFA12 /* Sounds */,
 				568755591EA82782004C351F /* Main.storyboard */,
 				5687555C1EA82782004C351F /* Info.plist */,
+				56CD709B1EA9965E004AFA12 /* Extensions.swift */,
 			);
 			path = Sharkle;
+			sourceTree = "<group>";
+		};
+		56CD70AD1EA99D9B004AFA12 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				56BF4A721EA99EA300021BC2 /* hey_0.m4a */,
+				56BF4A731EA99EA300021BC2 /* hey_1.m4a */,
+				56BF4A741EA99EA300021BC2 /* hey_2.m4a */,
+				56BF4A751EA99EA300021BC2 /* hey_3.m4a */,
+				56BF4A761EA99EA300021BC2 /* hey_4.m4a */,
+				56BF4A771EA99EA300021BC2 /* hey_5.m4a */,
+				56BF4A781EA99EA300021BC2 /* hey_6.m4a */,
+				56BF4A791EA99EA300021BC2 /* hey_7.m4a */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +137,7 @@
 				};
 			};
 			buildConfigurationList = 5687554B1EA82781004C351F /* Build configuration list for PBXProject "Sharkle" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -121,8 +159,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				568755581EA82781004C351F /* Assets.xcassets in Resources */,
+				56BF4A801EA99EA300021BC2 /* hey_6.m4a in Resources */,
+				56BF4A7D1EA99EA300021BC2 /* hey_3.m4a in Resources */,
+				56BF4A7A1EA99EA300021BC2 /* hey_0.m4a in Resources */,
+				56BF4A7F1EA99EA300021BC2 /* hey_5.m4a in Resources */,
+				56BF4A831EA9B4D100021BC2 /* Assets.xcassets in Resources */,
+				56BF4A7E1EA99EA300021BC2 /* hey_4.m4a in Resources */,
+				56BF4A7C1EA99EA300021BC2 /* hey_2.m4a in Resources */,
+				56BF4A811EA99EA300021BC2 /* hey_7.m4a in Resources */,
 				5687555B1EA82782004C351F /* Main.storyboard in Resources */,
+				56BF4A7B1EA99EA300021BC2 /* hey_1.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56CD709A1EA98A12004AFA12 /* SharkleWindowController.swift in Sources */,
 				568755561EA82781004C351F /* ViewController.swift in Sources */,
 				568755541EA82781004C351F /* AppDelegate.swift in Sources */,
+				56CD709C1EA9965E004AFA12 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +339,7 @@
 				568755611EA82782004C351F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
