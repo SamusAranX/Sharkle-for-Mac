@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5624181B1EAA06AA0090FBC5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5624181A1EAA06AA0090FBC5 /* README.md */; };
 		568755541EA82781004C351F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755531EA82781004C351F /* AppDelegate.swift */; };
 		568755561EA82781004C351F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755551EA82781004C351F /* ViewController.swift */; };
 		5687555B1EA82782004C351F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568755591EA82782004C351F /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5624181A1EAA06AA0090FBC5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		568755501EA82781004C351F /* Sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568755531EA82781004C351F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568755551EA82781004C351F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				568755591EA82782004C351F /* Main.storyboard */,
 				5687555C1EA82782004C351F /* Info.plist */,
 				56CD709B1EA9965E004AFA12 /* Extensions.swift */,
+				5624181A1EAA06AA0090FBC5 /* README.md */,
 			);
 			path = Sharkle;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BF4A801EA99EA300021BC2 /* hey_6.m4a in Resources */,
+				5624181B1EAA06AA0090FBC5 /* README.md in Resources */,
 				56BF4A7D1EA99EA300021BC2 /* hey_3.m4a in Resources */,
 				56BF4A7A1EA99EA300021BC2 /* hey_0.m4a in Resources */,
 				56BF4A7F1EA99EA300021BC2 /* hey_5.m4a in Resources */,
