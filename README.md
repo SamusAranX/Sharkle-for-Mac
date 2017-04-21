@@ -7,6 +7,7 @@ Hey!
 * Says "Hey" when you click on him
 * Can be dragged across the desktop
 	* Remembers where he was dropped
+* [Also available for Windows](https://github.com/SamusAranX/Sharkle)
 
 ## Download
 Download Sharkle over on the [Releases tab](https://github.com/SamusAranX/Sharkle-for-Mac/releases).
