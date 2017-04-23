@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5625521F1EAC1EB500E40AAB /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5625521E1EAC1EB500E40AAB /* HyperlinkTextField.swift */; };
 		568755541EA82781004C351F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755531EA82781004C351F /* AppDelegate.swift */; };
 		568755561EA82781004C351F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755551EA82781004C351F /* ViewController.swift */; };
 		5687555B1EA82782004C351F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568755591EA82782004C351F /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5625521E1EAC1EB500E40AAB /* HyperlinkTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 		568755501EA82781004C351F /* Sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568755531EA82781004C351F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568755551EA82781004C351F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				568755591EA82782004C351F /* Main.storyboard */,
 				5687555C1EA82782004C351F /* Info.plist */,
 				56CD709B1EA9965E004AFA12 /* Extensions.swift */,
+				5625521E1EAC1EB500E40AAB /* HyperlinkTextField.swift */,
 			);
 			path = Sharkle;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				56CD709A1EA98A12004AFA12 /* SharkleWindowController.swift in Sources */,
 				568755561EA82781004C351F /* ViewController.swift in Sources */,
+				5625521F1EAC1EB500E40AAB /* HyperlinkTextField.swift in Sources */,
 				568755541EA82781004C351F /* AppDelegate.swift in Sources */,
 				568C73841EA9E12300CBA2D3 /* AboutViewController.swift in Sources */,
 				56CD709C1EA9965E004AFA12 /* Extensions.swift in Sources */,
@@ -312,6 +316,7 @@
 				DEVELOPMENT_TEAM = 4YJ6956B5Q;
 				INFOPLIST_FILE = Sharkle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterwunder.Sharkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -327,6 +332,7 @@
 				DEVELOPMENT_TEAM = 4YJ6956B5Q;
 				INFOPLIST_FILE = Sharkle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterwunder.Sharkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
