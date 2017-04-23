@@ -64,3 +64,17 @@ extension Timer {
         CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, .commonModes)
     }
 }
+
+extension String {
+    func fullNSRange() -> NSRange {
+        return NSMakeRange(0, NSString(string: self).length)
+    }
+    
+    func hyperlink(with url: URL) -> NSAttributedString {
+        let stringRange = self.fullNSRange()
+        let attrString = NSMutableAttributedString(string: self)
+        
+        attrString.addAttribute(NSLinkAttributeName, value: url, range: stringRange)
+        return attrString
+    }
+}

@@ -13,45 +13,56 @@ class AboutViewController: NSViewController {
     @IBOutlet weak var containerView: NSView!
     @IBOutlet weak var horizontalLine: NSView!
     @IBOutlet weak var versionLabel: NSTextField!
+    @IBOutlet weak var aboutLabel: HyperlinkTextField!
+    
+    @IBOutlet weak var githubLabel: HyperlinkTextField!
+    @IBOutlet weak var bugsLabel: HyperlinkTextField!
+    @IBOutlet weak var twitterLabel: HyperlinkTextField!
+    
+    let hyperlinksInText = [
+        "Night in the Woods": URL(string: "http://nightinthewoods.com")!,
+        "this part of Jesse Cox's playthrough": URL(string: "https://www.youtube.com/watch?v=d86WnX_271U&feature=youtu.be&t=1h34m30s")!
+    ]
+    
+    let hyperlinksForLabels = [
+        URL(string: "https://github.com/SamusAranX/Sharkle-for-Mac")!,
+        URL(string: "https://github.com/SamusAranX/Sharkle-for-Mac")!,
+        URL(string: "https://twitter.com/SamusAranX")!
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Make title banner look good
         containerView.wantsLayer = true
-        containerView.layer?.backgroundColor = NSColor.white.cgColor
+        containerView.layer!.backgroundColor = NSColor.white.cgColor
         
         horizontalLine.wantsLayer = true
-        horizontalLine.layer?.backgroundColor = NSColor(white: 0.8666, alpha: 1).cgColor
+        horizontalLine.layer!.backgroundColor = NSColor(white: 0.8666, alpha: 1).cgColor
         
-        let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
         versionLabel.stringValue = "v\(version)"
         
+        // Configure hyperlinks in multi-line label
+        let aboutString = NSString(string: aboutLabel.stringValue)
+        let aboutAttrString = NSMutableAttributedString(string: aboutLabel.stringValue)
+        for hyperlink in hyperlinksInText {
+            print(hyperlink.key)
+            let range = aboutString.range(of: hyperlink.key)
+            aboutAttrString.addAttribute(NSLinkAttributeName, value: hyperlink.value, range: range)
+        }
         
-    }
-    
-    @IBAction func aboutButton(_ sender: Any) {
-        let url = URL(string: "http://www.nightinthewoods.com")!
-        NSWorkspace.shared().open(url)
-    }
-    
-    @IBAction func playthroughButton(_ sender: Any) {
-        let url = URL(string: "https://www.youtube.com/watch?v=d86WnX_271U&feature=youtu.be&t=1h34m30s")!
-        NSWorkspace.shared().open(url)
-    }
-    
-    @IBAction func sourceButton(_ sender: Any) {
-        let url = URL(string: "https://github.com/SamusAranX/Sharkle/")!
-        NSWorkspace.shared().open(url)
-    }
-    
-    @IBAction func bugsButton(_ sender: Any) {
-        let url = URL(string: "https://github.com/SamusAranX/Sharkle/issues")!
-        NSWorkspace.shared().open(url)
-    }
-    
-    @IBAction func praiseButton(_ sender: Any) {
-        let url = URL(string: "https://twitter.com/SamusAranX")!
-        NSWorkspace.shared().open(url)
+        aboutLabel.attributedStringValue = aboutAttrString
+        
+        // Configure hyperlinks in smaller labels
+        let githubAttrString = githubLabel.stringValue.hyperlink(with: hyperlinksForLabels[0])
+        githubLabel.attributedStringValue = githubAttrString
+        
+        let bugsAttrString = bugsLabel.stringValue.hyperlink(with: hyperlinksForLabels[1])
+        bugsLabel.attributedStringValue = bugsAttrString
+        
+        let twitterAttrString = twitterLabel.stringValue.hyperlink(with: hyperlinksForLabels[2])
+        twitterLabel.attributedStringValue = twitterAttrString
     }
     
 }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5625521F1EAC1EB500E40AAB /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5625521E1EAC1EB500E40AAB /* HyperlinkTextField.swift */; };
+		565023C91EAD1C3600BB27CE /* HyperlinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 565023C81EAD1C3600BB27CE /* HyperlinkTextField.m */; };
 		568755541EA82781004C351F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755531EA82781004C351F /* AppDelegate.swift */; };
 		568755561EA82781004C351F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568755551EA82781004C351F /* ViewController.swift */; };
 		5687555B1EA82782004C351F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 568755591EA82782004C351F /* Main.storyboard */; };
@@ -26,7 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5625521E1EAC1EB500E40AAB /* HyperlinkTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
+		565023C61EAD1C3600BB27CE /* Sharkle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sharkle-Bridging-Header.h"; sourceTree = "<group>"; };
+		565023C71EAD1C3600BB27CE /* HyperlinkTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkTextField.h; sourceTree = "<group>"; };
+		565023C81EAD1C3600BB27CE /* HyperlinkTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkTextField.m; sourceTree = "<group>"; };
 		568755501EA82781004C351F /* Sharkle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharkle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568755531EA82781004C351F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568755551EA82781004C351F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		565023C51EAD1C1700BB27CE /* HyperlinkTextField */ = {
+			isa = PBXGroup;
+			children = (
+				565023C71EAD1C3600BB27CE /* HyperlinkTextField.h */,
+				565023C81EAD1C3600BB27CE /* HyperlinkTextField.m */,
+				565023C61EAD1C3600BB27CE /* Sharkle-Bridging-Header.h */,
+			);
+			name = HyperlinkTextField;
+			sourceTree = "<group>";
+		};
 		568755471EA82781004C351F = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 		568755521EA82781004C351F /* Sharkle */ = {
 			isa = PBXGroup;
 			children = (
+				565023C51EAD1C1700BB27CE /* HyperlinkTextField */,
 				568C73871EA9F27600CBA2D3 /* Sharkle.entitlements */,
 				568755531EA82781004C351F /* AppDelegate.swift */,
 				568755551EA82781004C351F /* ViewController.swift */,
@@ -87,7 +100,6 @@
 				568755591EA82782004C351F /* Main.storyboard */,
 				5687555C1EA82782004C351F /* Info.plist */,
 				56CD709B1EA9965E004AFA12 /* Extensions.swift */,
-				5625521E1EAC1EB500E40AAB /* HyperlinkTextField.swift */,
 			);
 			path = Sharkle;
 			sourceTree = "<group>";
@@ -140,6 +152,7 @@
 					5687554F1EA82781004C351F = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4YJ6956B5Q;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -192,9 +205,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565023C91EAD1C3600BB27CE /* HyperlinkTextField.m in Sources */,
 				56CD709A1EA98A12004AFA12 /* SharkleWindowController.swift in Sources */,
 				568755561EA82781004C351F /* ViewController.swift in Sources */,
-				5625521F1EAC1EB500E40AAB /* HyperlinkTextField.swift in Sources */,
 				568755541EA82781004C351F /* AppDelegate.swift in Sources */,
 				568C73841EA9E12300CBA2D3 /* AboutViewController.swift in Sources */,
 				56CD709C1EA9965E004AFA12 /* Extensions.swift in Sources */,
@@ -311,6 +324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Sharkle/Sharkle.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4YJ6956B5Q;
@@ -319,6 +333,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterwunder.Sharkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sharkle/Sharkle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -327,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Sharkle/Sharkle.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4YJ6956B5Q;
@@ -335,6 +352,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.peterwunder.Sharkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sharkle/Sharkle-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
