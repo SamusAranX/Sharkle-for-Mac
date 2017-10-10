@@ -74,7 +74,7 @@ extension String {
         let stringRange = self.fullNSRange()
         let attrString = NSMutableAttributedString(string: self)
         
-        attrString.addAttribute(NSLinkAttributeName, value: url, range: stringRange)
+        attrString.addAttribute(NSAttributedStringKey.link, value: url, range: stringRange)
         return attrString
     }
 }

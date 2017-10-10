@@ -18,13 +18,22 @@ class ViewController: NSViewController {
     // Global AVAudioPlayer variable, gets set in mouseDown event
     var player: AVAudioPlayer!
     
-    let idleImages: [NSImage] = (0..<8).map({ NSImage(named: "sharkle_idle\($0)")! })
+    let idleImages: [NSImage] = (0..<8).map {
+        let imageName = NSImage.Name("sharkle_idle\($0)")
+        return NSImage(named: imageName)!
+    }
     let idleAnimDuration = 0.666
     
-    let waveImages: [NSImage] = (0..<4).map({ NSImage(named: "sharkle_wave\($0)")! })
+    let waveImages: [NSImage] = (0..<4).map {
+        let imageName = NSImage.Name("sharkle_wave\($0)")
+        return NSImage(named: imageName)!
+    }
     let waveAnimDuration = 0.4
     
-    let bubbleImages: [NSImage] = (0..<2).map({ NSImage(named: "sharkle_bubble\($0)")! })
+    let bubbleImages: [NSImage] = (0..<2).map {
+        let imageName = NSImage.Name("sharkle_bubble\($0)")
+        return NSImage(named: imageName)!
+    }
     let bubbleAnimDuration = 0.8
     
     let sharkleSounds: [URL] = (0..<8).map({ URL(fileURLWithPath: Bundle.main.path(forResource: "hey_\($0)", ofType: "m4a")!) })

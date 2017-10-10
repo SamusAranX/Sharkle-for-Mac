@@ -49,7 +49,7 @@ class AboutViewController: NSViewController {
         for hyperlink in hyperlinksInText {
             print(hyperlink.key)
             let range = aboutString.range(of: hyperlink.key)
-            aboutAttrString.addAttribute(NSLinkAttributeName, value: hyperlink.value, range: range)
+            aboutAttrString.addAttribute(NSAttributedStringKey.link, value: hyperlink.value, range: range)
         }
         
         aboutLabel.attributedStringValue = aboutAttrString

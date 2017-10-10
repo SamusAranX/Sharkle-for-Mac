@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
@@ -59,13 +59,13 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="File" id="sMI-sn-ism">
+                            <menuItem title="File" id="4rI-nv-Wld">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="File" id="AGK-qB-lA1">
+                                <menu key="submenu" title="File" id="x1e-aN-NCX">
                                     <items>
-                                        <menuItem title="Close" keyEquivalent="w" id="57A-6N-xpX">
+                                        <menuItem title="Close" keyEquivalent="w" id="s1F-xM-q9S">
                                             <connections>
-                                                <action selector="performClose:" target="Ady-hI-5gd" id="Ktg-9n-gkl"/>
+                                                <action selector="performClose:" target="Ady-hI-5gd" id="RcR-uA-Rdi"/>
                                             </connections>
                                         </menuItem>
                                     </items>
@@ -130,6 +130,9 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="246" height="246"/>
                         <value key="maxSize" type="size" width="246" height="246"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="ae6-nH-ezL"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -197,6 +200,9 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="425" y="461" width="316" height="256"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+                        <connections>
+                            <outlet property="delegate" destination="71C-e3-hS3" id="VQm-yE-rAx"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="07T-8k-iQn" kind="relationship" relationship="window.shadowedContentViewController" id="j8v-jx-79Y"/>
@@ -224,7 +230,7 @@
                                         </constraints>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SmolIcon" id="2MC-jK-Q8H"/>
                                     </imageView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-Ge-yZy">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-Ge-yZy">
                                         <rect key="frame" x="18" y="24" width="133" height="48"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sharkle" id="Agd-Z6-16r">
                                             <font key="font" metaFont="systemLight" size="40"/>
@@ -232,7 +238,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuZ-j5-zuH">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cuZ-j5-zuH">
                                         <rect key="frame" x="149" y="30" width="24" height="19"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="vX" id="q3l-m9-WTY">
                                             <font key="font" metaFont="systemSemibold" size="16"/>
@@ -240,7 +246,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-Tb-MeQ">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-Tb-MeQ">
                                         <rect key="frame" x="18" y="12" width="200" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="A project by Peter Wunder, 2017" id="q1H-rd-AgY">
                                             <font key="font" metaFont="system"/>
@@ -271,17 +277,17 @@
                                     <constraint firstAttribute="bottom" secondItem="gB5-2M-lYU" secondAttribute="bottom" id="zT2-Nm-Mxu"/>
                                 </constraints>
                             </customView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jn-2v-FD2" customClass="HyperlinkTextField">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6jn-2v-FD2" customClass="HyperlinkTextField">
                                 <rect key="frame" x="18" y="94" width="284" height="64"/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="YTh-fe-VNc">
-                                    <font key="font" metaFont="system" size="12"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                     <string key="title">Inspired by Night in the Woods's Sharkle.
 For a relatively spoiler-free explanation, watch this part of Jesse Cox's playthrough from ~1:34:30 to ~1:35:00.</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jba-Yo-syp">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jba-Yo-syp">
                                 <rect key="frame" x="41" y="42" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="GNf-DV-Ujz"/>
@@ -292,7 +298,7 @@ For a relatively spoiler-free explanation, watch this part of Jesse Cox's playth
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-1N-ANF">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-1N-ANF">
                                 <rect key="frame" x="41" y="18" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="6IR-kH-Hph"/>
@@ -303,40 +309,40 @@ For a relatively spoiler-free explanation, watch this part of Jesse Cox's playth
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kR-oV-BAB" customClass="HyperlinkTextField">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3kR-oV-BAB" customClass="HyperlinkTextField">
                                 <rect key="frame" x="165" y="66" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="bbY-qV-YE7"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="It's on GitHub!" id="QCa-xV-PGi">
-                                    <font key="font" metaFont="system" size="12"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26t-4I-7do" customClass="HyperlinkTextField">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="26t-4I-7do" customClass="HyperlinkTextField">
                                 <rect key="frame" x="165" y="42" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="B07-Vf-mnN"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Let me know!" id="oxE-Mc-HMG">
-                                    <font key="font" metaFont="system" size="12"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-92-II5" customClass="HyperlinkTextField">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-92-II5" customClass="HyperlinkTextField">
                                 <rect key="frame" x="165" y="18" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="9xW-3l-A6I"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="I'm on Twitter!" id="luo-UE-uKQ">
-                                    <font key="font" metaFont="system" size="12"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRv-gH-NJ0">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VRv-gH-NJ0">
                                 <rect key="frame" x="41" y="66" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="Oew-qO-1Y6"/>
