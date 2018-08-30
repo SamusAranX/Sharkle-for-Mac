@@ -18,8 +18,8 @@ Download Sharkle over on the [Releases tab](https://github.com/SamusAranX/Sharkl
 
 ## Screenshots
 ![Sharkle, in all his glory](https://cloud.githubusercontent.com/assets/676069/25271293/f26e8a04-2683-11e7-9927-93d71104931f.png)
-![The About window](https://user-images.githubusercontent.com/676069/44877558-9f2de800-aca4-11e8-827d-366711194f0a.png)
-![The About window, feat. Dark Mode](https://user-images.githubusercontent.com/676069/44877564-a3f29c00-aca4-11e8-8f32-5d9e157cbef4.png)
+![The About window](https://user-images.githubusercontent.com/676069/44877888-aa354800-aca5-11e8-8741-8b775fb255d7.png)
+![The About window, feat. Dark Mode](https://user-images.githubusercontent.com/676069/44877893-ad303880-aca5-11e8-9ed4-561c85888480.png)
 
 ## Known issues
 * On dark desktop backgrounds, Sharkle might be hard to see
