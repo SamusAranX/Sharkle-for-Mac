@@ -11,7 +11,6 @@ import Cocoa
 class AboutViewController: NSViewController {
     
     @IBOutlet weak var containerView: NSView!
-    @IBOutlet weak var horizontalLine: NSView!
     @IBOutlet weak var versionLabel: NSTextField!
     @IBOutlet weak var aboutLabel: HyperlinkTextField!
     
@@ -33,13 +32,7 @@ class AboutViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Make title banner look good
-        containerView.wantsLayer = true
-        containerView.layer!.backgroundColor = NSColor.white.cgColor
-        
-        horizontalLine.wantsLayer = true
-        horizontalLine.layer!.backgroundColor = NSColor(white: 0.8666, alpha: 1).cgColor
-        
+        // Fill in the version number
         let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
         versionLabel.stringValue = "v\(version)"
         
@@ -47,9 +40,8 @@ class AboutViewController: NSViewController {
         let aboutString = NSString(string: aboutLabel.stringValue)
         let aboutAttrString = NSMutableAttributedString(string: aboutLabel.stringValue)
         for hyperlink in hyperlinksInText {
-            print(hyperlink.key)
             let range = aboutString.range(of: hyperlink.key)
-            aboutAttrString.addAttribute(NSAttributedStringKey.link, value: hyperlink.value, range: range)
+            aboutAttrString.addAttribute(NSAttributedString.Key.link, value: hyperlink.value, range: range)
         }
         
         aboutLabel.attributedStringValue = aboutAttrString

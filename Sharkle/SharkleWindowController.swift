@@ -13,9 +13,7 @@ class SharkleWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         
-        self.windowFrameAutosaveName = NSWindow.FrameAutosaveName(rawValue: "position")
-        
-        // Yes, I'm taking a valid value returned by the system and adding one to it. Sue me.
+        // Yes, I'm taking a valid value returned by the system and arbitrarily adding one to it. Sue me.
         // This is the only way to make Sharkle able to intercept clicks.
         self.window?.level = NSWindow.Level(rawValue: Int(CGWindowLevelForKey(CGWindowLevelKey.desktopIconWindow)) + 1)
         

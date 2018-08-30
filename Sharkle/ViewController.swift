@@ -16,7 +16,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var sharkleBubbleView: NSView!
     
     // Global AVAudioPlayer variable, gets set in mouseDown event
-    var player: AVAudioPlayer!
+    var players: [AVAudioPlayer] = []
     
     let idleImages: [NSImage] = (0..<8).map {
         let imageName = NSImage.Name("sharkle_idle\($0)")
@@ -41,6 +41,20 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for soundURL in sharkleSounds {
+            do {
+                let player = try AVAudioPlayer(contentsOf: soundURL)
+                player.prepareToPlay()
+                player.volume = 1.4
+                
+                self.players.append(player)
+            } catch {
+                // This should never happen
+                // famouslastwords.swift
+                print("Error loading audio file \(soundURL)")
+            }
+        }
+        
         sharkleIdleView.animate(withImages: idleImages, andDuration: idleAnimDuration)
     }
     
@@ -53,28 +67,20 @@ class ViewController: NSViewController {
         
         animationIsPlaying = true
         
-        do {
-            player = try AVAudioPlayer(contentsOf: sharkleSounds.random())
-            player.volume = 2.0 // The sounds are really quiet, so I'm compensating for that here
-            player.play()
-            
-            // Stop regular idle animation
-            sharkleIdleView.stopAnimating()
-            
-            // Start waving animation
-            sharkleWaveView.animate(withImages: waveImages, andDuration: waveAnimDuration)
-            
-            // Start bubble animation, after which all animations get reset
-            sharkleBubbleView.animate(withImages: bubbleImages, andDuration: bubbleAnimDuration, repeatTimes: 2.5, afterWhich: {
-                self.sharkleWaveView.stopAnimating()
-                self.sharkleIdleView.animate(withImages: self.idleImages, andDuration: self.idleAnimDuration)
-                self.animationIsPlaying = false
-            })
-        } catch {
-            // This should never happen
-            // famouslastwords.swift
-            print("Error playing audio file")
-        }
+        self.players.randomElement()?.play()
+        
+        // Stop regular idle animation
+        sharkleIdleView.stopAnimating()
+        
+        // Start waving animation
+        sharkleWaveView.animate(withImages: waveImages, andDuration: waveAnimDuration)
+        
+        // Start bubble animation, after which all animations get reset
+        sharkleBubbleView.animate(withImages: bubbleImages, andDuration: bubbleAnimDuration, repeatTimes: 2.5, afterWhich: {
+            self.sharkleWaveView.stopAnimating()
+            self.sharkleIdleView.animate(withImages: self.idleImages, andDuration: self.idleAnimDuration)
+            self.animationIsPlaying = false
+        })
     }
 }
 

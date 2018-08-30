@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14306.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -123,7 +121,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="SharkleWindowController" customModule="Sharkle" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Sharkle" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Sharkle" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="SharkleMainWindow" animationBehavior="default" id="IQv-IB-iLA">
                         <windowCollectionBehavior key="collectionBehavior" canJoinAllSpaces="YES" stationary="YES" ignoresCycle="YES" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="246" height="246"/>
@@ -195,10 +193,10 @@
         <scene sceneID="DKm-b0-18F">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="71C-e3-hS3" sceneMemberID="viewController">
-                    <window key="window" title="About Sharkle" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="GiL-Z3-jjO">
+                    <window key="window" title="About Sharkle" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="GiL-Z3-jjO">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="425" y="461" width="316" height="256"/>
+                        <rect key="contentRect" x="425" y="461" width="330" height="256"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
                         <connections>
                             <outlet property="delegate" destination="71C-e3-hS3" id="VQm-yE-rAx"/>
@@ -217,68 +215,95 @@
             <objects>
                 <viewController id="07T-8k-iQn" customClass="AboutViewController" customModule="Sharkle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="K5Y-68-kxm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="246"/>
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="246"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="TTG-89-vnz">
-                                <rect key="frame" x="0.0" y="166" width="320" height="80"/>
+                                <rect key="frame" x="0.0" y="166" width="330" height="80"/>
                                 <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-2M-lYU">
-                                        <rect key="frame" x="232" y="0.0" width="80" height="80"/>
+                                    <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="vx1-eg-sQD">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="80"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gB5-2M-lYU">
+                                                <rect key="frame" x="250" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gB5-2M-lYU" secondAttribute="height" multiplier="1:1" id="O6P-hW-wFd"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SmolIcon" id="2MC-jK-Q8H"/>
+                                            </imageView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-zg-hba">
+                                                <rect key="frame" x="20" y="10" width="240" height="60"/>
+                                                <subviews>
+                                                    <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBt-8D-Uiv">
+                                                        <rect key="frame" x="0.0" y="17" width="147" height="43"/>
+                                                        <subviews>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-Ge-yZy">
+                                                                <rect key="frame" x="-2" y="1" width="129" height="42"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="42" id="C57-vZ-AdL"/>
+                                                                </constraints>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sharkle" id="Agd-Z6-16r">
+                                                                    <font key="font" metaFont="systemLight" size="40"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cuZ-j5-zuH">
+                                                                <rect key="frame" x="125" y="0.0" width="24" height="19"/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="vX" id="q3l-m9-WTY">
+                                                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                        </subviews>
+                                                        <visibilityPriorities>
+                                                            <integer value="1000"/>
+                                                            <integer value="1000"/>
+                                                        </visibilityPriorities>
+                                                        <customSpacing>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                        </customSpacing>
+                                                    </stackView>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-Tb-MeQ">
+                                                        <rect key="frame" x="-2" y="0.0" width="244" height="17"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="A project by Peter Wunder, 2017 – 2018" id="q1H-rd-AgY">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="gB5-2M-lYU" secondAttribute="height" multiplier="1:1" id="O6P-hW-wFd"/>
+                                            <constraint firstItem="gB5-2M-lYU" firstAttribute="top" secondItem="vx1-eg-sQD" secondAttribute="top" id="6PZ-st-POK"/>
+                                            <constraint firstAttribute="trailing" secondItem="gB5-2M-lYU" secondAttribute="trailing" id="QNO-Ep-5g3"/>
+                                            <constraint firstAttribute="bottom" secondItem="gB5-2M-lYU" secondAttribute="bottom" id="aJh-mO-qt4"/>
+                                            <constraint firstItem="9W8-zg-hba" firstAttribute="centerY" secondItem="vx1-eg-sQD" secondAttribute="centerY" id="sB8-x9-RZQ"/>
+                                            <constraint firstItem="9W8-zg-hba" firstAttribute="leading" secondItem="vx1-eg-sQD" secondAttribute="leading" constant="20" id="yTt-27-VWl"/>
                                         </constraints>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SmolIcon" id="2MC-jK-Q8H"/>
-                                    </imageView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-Ge-yZy">
-                                        <rect key="frame" x="18" y="24" width="133" height="48"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Sharkle" id="Agd-Z6-16r">
-                                            <font key="font" metaFont="systemLight" size="40"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cuZ-j5-zuH">
-                                        <rect key="frame" x="149" y="30" width="24" height="19"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="vX" id="q3l-m9-WTY">
-                                            <font key="font" metaFont="systemSemibold" size="16"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-Tb-MeQ">
-                                        <rect key="frame" x="18" y="12" width="200" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="A project by Peter Wunder, 2017" id="q1H-rd-AgY">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="4p2-vT-JgE">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="yVX-Fl-etg"/>
-                                        </constraints>
-                                    </customView>
+                                    </visualEffectView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="4p2-vT-JgE" secondAttribute="bottom" id="38k-9H-V2K"/>
-                                    <constraint firstAttribute="trailing" secondItem="4p2-vT-JgE" secondAttribute="trailing" id="GuS-pl-Xdy"/>
-                                    <constraint firstItem="gB5-2M-lYU" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="top" id="Pk3-Kb-KL2"/>
-                                    <constraint firstAttribute="trailing" secondItem="gB5-2M-lYU" secondAttribute="trailing" constant="8" id="Qic-V9-TSX"/>
-                                    <constraint firstItem="j8H-Tb-MeQ" firstAttribute="leading" secondItem="TTG-89-vnz" secondAttribute="leading" constant="20" id="RH3-p2-zgI"/>
-                                    <constraint firstItem="rpz-Ge-yZy" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="top" constant="8" id="SIF-g5-0ux"/>
-                                    <constraint firstItem="rpz-Ge-yZy" firstAttribute="leading" secondItem="TTG-89-vnz" secondAttribute="leading" constant="20" id="Ssc-wU-dvR"/>
-                                    <constraint firstItem="j8H-Tb-MeQ" firstAttribute="top" secondItem="rpz-Ge-yZy" secondAttribute="bottom" constant="-5" id="Tpk-BF-6rJ"/>
-                                    <constraint firstItem="4p2-vT-JgE" firstAttribute="leading" secondItem="TTG-89-vnz" secondAttribute="leading" id="aaR-h1-tVI"/>
-                                    <constraint firstItem="cuZ-j5-zuH" firstAttribute="leading" secondItem="rpz-Ge-yZy" secondAttribute="trailing" constant="2" id="dKY-Wo-C8C"/>
-                                    <constraint firstItem="cuZ-j5-zuH" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="top" constant="31" id="fqM-UJ-i6J"/>
+                                    <constraint firstItem="vx1-eg-sQD" firstAttribute="top" secondItem="TTG-89-vnz" secondAttribute="top" id="237-am-BZG"/>
+                                    <constraint firstItem="vx1-eg-sQD" firstAttribute="leading" secondItem="TTG-89-vnz" secondAttribute="leading" id="2fd-HX-Xxx"/>
+                                    <constraint firstAttribute="trailing" secondItem="vx1-eg-sQD" secondAttribute="trailing" id="amX-Fo-q4e"/>
                                     <constraint firstAttribute="height" constant="80" id="gJe-tR-wPi"/>
-                                    <constraint firstAttribute="bottom" secondItem="gB5-2M-lYU" secondAttribute="bottom" id="zT2-Nm-Mxu"/>
+                                    <constraint firstAttribute="bottom" secondItem="vx1-eg-sQD" secondAttribute="bottom" id="zrH-LZ-Ukt"/>
                                 </constraints>
                             </customView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6jn-2v-FD2" customClass="HyperlinkTextField">
-                                <rect key="frame" x="18" y="94" width="284" height="64"/>
+                                <rect key="frame" x="18" y="94" width="294" height="64"/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="YTh-fe-VNc">
                                     <font key="font" metaFont="cellTitle"/>
                                     <string key="title">Inspired by Night in the Woods's Sharkle.
@@ -288,7 +313,7 @@ For a relatively spoiler-free explanation, watch this part of Jesse Cox's playth
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jba-Yo-syp">
-                                <rect key="frame" x="41" y="42" width="114" height="16"/>
+                                <rect key="frame" x="46" y="42" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="GNf-DV-Ujz"/>
                                 </constraints>
@@ -299,7 +324,7 @@ For a relatively spoiler-free explanation, watch this part of Jesse Cox's playth
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-1N-ANF">
-                                <rect key="frame" x="41" y="18" width="114" height="16"/>
+                                <rect key="frame" x="46" y="18" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="6IR-kH-Hph"/>
                                 </constraints>
@@ -310,40 +335,40 @@ For a relatively spoiler-free explanation, watch this part of Jesse Cox's playth
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3kR-oV-BAB" customClass="HyperlinkTextField">
-                                <rect key="frame" x="165" y="66" width="114" height="16"/>
+                                <rect key="frame" x="170" y="66" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="bbY-qV-YE7"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="It's on GitHub!" id="QCa-xV-PGi">
                                     <font key="font" metaFont="cellTitle"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="26t-4I-7do" customClass="HyperlinkTextField">
-                                <rect key="frame" x="165" y="42" width="114" height="16"/>
+                                <rect key="frame" x="170" y="42" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="B07-Vf-mnN"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Let me know!" id="oxE-Mc-HMG">
                                     <font key="font" metaFont="cellTitle"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RHp-92-II5" customClass="HyperlinkTextField">
-                                <rect key="frame" x="165" y="18" width="114" height="16"/>
+                                <rect key="frame" x="170" y="18" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="9xW-3l-A6I"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="I'm on Twitter!" id="luo-UE-uKQ">
                                     <font key="font" metaFont="cellTitle"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VRv-gH-NJ0">
-                                <rect key="frame" x="41" y="66" width="114" height="16"/>
+                                <rect key="frame" x="46" y="66" width="114" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="Oew-qO-1Y6"/>
                                 </constraints>
@@ -380,7 +405,6 @@ For a relatively spoiler-free explanation, watch this part of Jesse Cox's playth
                         <outlet property="bugsLabel" destination="26t-4I-7do" id="KpU-G9-fwp"/>
                         <outlet property="containerView" destination="TTG-89-vnz" id="ui1-qz-KDj"/>
                         <outlet property="githubLabel" destination="3kR-oV-BAB" id="0hL-Du-6xs"/>
-                        <outlet property="horizontalLine" destination="4p2-vT-JgE" id="9lx-fh-3tu"/>
                         <outlet property="twitterLabel" destination="RHp-92-II5" id="eue-U3-ENO"/>
                         <outlet property="versionLabel" destination="cuZ-j5-zuH" id="pJU-Ol-5PH"/>
                     </connections>

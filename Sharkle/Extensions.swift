@@ -25,7 +25,7 @@ extension NSView {
         let animLayer = CALayer()
         let keyPath = "contents"
         let animation = CAKeyframeAnimation(keyPath: keyPath)
-        animation.calculationMode = kCAAnimationDiscrete
+        animation.calculationMode = CAAnimationCalculationMode.discrete
         
         animation.duration = duration
         animation.repeatCount = repeats
@@ -47,18 +47,8 @@ extension NSView {
     
 }
 
-extension Array {
-    
-    // Picks a random element from an Array
-    func random() -> Element {
-        let index = Int(arc4random_uniform(UInt32(self.count)))
-        return self[index]
-    }
-    
-}
-
 extension Timer {
-    class func schedule(delay: TimeInterval, handler: @escaping (Timer!) -> Void) {
+    class func schedule(delay: TimeInterval, handler: @escaping (Timer?) -> Void) {
         let fireDate = delay + CFAbsoluteTimeGetCurrent()
         let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, 0, 0, 0, handler)
         CFRunLoopAddTimer(CFRunLoopGetCurrent(), timer, .commonModes)
@@ -74,7 +64,8 @@ extension String {
         let stringRange = self.fullNSRange()
         let attrString = NSMutableAttributedString(string: self)
         
-        attrString.addAttribute(NSAttributedStringKey.link, value: url, range: stringRange)
+        attrString.addAttribute(NSAttributedString.Key.link, value: url, range: stringRange)
+        
         return attrString
     }
 }
